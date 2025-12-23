@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passphrase Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="app-wrapper">
+        <div class="card">
+            <!-- Header -->
+            <header>
+                <div class="header-content">
+                    <h1>Passphrase Generator</h1>
+                    <p>Sichere deutsche Passwörter</p>
+                </div>
+                <button id="themeToggle" class="theme-btn" title="Dark Mode umschalten">
+                    <!-- Icons handled by CSS/JS -->
+                    <svg class="icon sun-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
+                    <svg class="icon moon-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
+                </button>
+            </header>
+
+            <!-- Main Content -->
+            <main>
+                <!-- Result Display -->
+                <div class="output-section">
+                    <div class="label-row">
+                        <label>Generierte Passphrase</label>
+                        <span id="entropyText" class="entropy-badge">0 bits</span>
+                    </div>
+                    
+                    <div class="output-wrapper">
+                        <div id="passphraseOutput">...</div>
+                        
+                        <div class="action-buttons">
+                            <button id="btnRefresh" class="icon-btn" title="Neu generieren">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 4v6h-6"></path><path d="M1 20v-6h6"></path><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path></svg>
+                            </button>
+                            <button id="btnCopy" class="icon-btn" title="Kopieren">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="strength-bar-bg">
+                        <div id="strengthBar"></div>
+                    </div>
+                </div>
+
+                <!-- Controls -->
+                <div class="controls-grid">
+                    
+                    <!-- Word Count -->
+                    <div class="control-group">
+                        <div class="flex-between">
+                            <label>Wortanzahl</label>
+                            <span id="wordCountValue" class="badge">4</span>
+                        </div>
+                        <input type="range" id="wordCount" min="3" max="12" value="4">
+                    </div>
+
+                    <!-- Separators -->
+                    <div class="control-group">
+                        <label>Trennzeichen</label>
+                        <div class="separator-grid">
+                            <button class="sep-btn active" data-sep="-">Bindestrich</button>
+                            <button class="sep-btn" data-sep=" ">Leerzeichen</button>
+                            <button class="sep-btn" data-sep=".">Punkt</button>
+                            <button class="sep-btn" data-sep="number">Zahlen</button>
+                        </div>
+                        <input type="hidden" id="separator" value="-">
+                    </div>
+
+                    <!-- Options -->
+                    <div class="control-group">
+                        <label>Optionen</label>
+                        <div class="checkbox-group">
+                            <label class="checkbox-item">
+                                <input type="checkbox" id="capitalize" checked>
+                                <span class="checkbox-text">Zufällige Großschreibung</span>
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" id="addNumber">
+                                <span class="checkbox-text">Zufallszahl am Ende</span>
+                            </label>
+                            <label class="checkbox-item">
+                                <input type="checkbox" id="addSymbol">
+                                <span class="checkbox-text">Sonderzeichen am Ende</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Advanced Settings -->
+                    <details class="advanced-settings">
+                        <summary>
+                            <span>Filter & Eigene Wörter</span>
+                            <svg class="chevron" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                        </summary>
+                        <div class="details-content">
+                            <div class="control-group">
+                                <label class="sub-label">Wortlänge (Buchstaben)</label>
+                                <div class="flex-gap">
+                                    <input type="number" id="minLength" value="3" min="1" max="20" placeholder="Min" class="input-number">
+                                    <span class="range-dash">-</span>
+                                    <input type="number" id="maxLength" value="15" min="1" max="20" placeholder="Max" class="input-number">
+                                </div>
+                            </div>
+
+                            <div class="control-group">
+                                <label class="sub-label">Sonderzeichen-Pool</label>
+                                <input type="text" id="specialCharPool" value="!@#$%^&*?_~" class="input-text monospace">
+                            </div>
+
+                            <div class="control-group">
+                                <label class="sub-label">Wörter ausschließen</label>
+                                <input type="text" id="excludedWords" class="input-text" placeholder="z.B. Apfel, Banane">
+                            </div>
+
+                            <div class="control-group">
+                                <label class="sub-label">Eigene Wörter</label>
+                                <input type="text" id="customWords" class="input-text" placeholder="z.B. MeinHund, Berlin">
+                            </div>
+                        </div>
+                    </details>
+
+                </div>
+
+                <button id="btnMainGenerate" class="primary-btn">Neu Generieren</button>
+            </main>
+            
+            <footer>
+                <p>100% Client-Side. Keine Datenübertragung.</p>
+            </footer>
+        </div>
+    </div>
+
+    <div id="toast">In die Zwischenablage kopiert</div>
+    <script src="script.js"></script>
+</body>
+</html>
