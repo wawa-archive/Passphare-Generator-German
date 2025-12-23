@@ -142,29 +142,28 @@ label {
     border-radius: 0.75rem;
     border: 1px solid var(--border-color);
     padding: 2rem;
-    /* KEY CHANGE: Padding right ensures text never overlaps buttons */
     padding-right: 120px; 
     transition: border-color 0.2s;
-    min-height: 6rem; /* Ensure height matches aesthetics */
+    min-height: 6rem;
     display: flex;
-    align-items: center; /* Vertically center the text */
+    align-items: center;
 }
 .output-wrapper:hover { border-color: var(--text-muted); }
 
 #passphraseOutput {
     font-family: 'JetBrains Mono', monospace;
-    font-size: 1.75rem; /* Larger, readable font */
+    font-size: 1.75rem;
     line-height: 1.4;
-    word-break: break-word; /* Wrap long words correctly */
+    word-break: break-word; 
     color: var(--text-main);
     width: 100%;
 }
 
 .action-buttons {
     position: absolute;
-    right: 1.5rem; /* Anchor to right */
-    top: 50%;      /* Center vertically */
-    transform: translateY(-50%); /* Perfect vertical centering */
+    right: 1.5rem;
+    top: 50%;      
+    transform: translateY(-50%);
     display: flex;
     gap: 0.75rem;
 }
@@ -247,6 +246,21 @@ input[type=range]::-webkit-slider-thumb:hover { transform: scale(1.15); }
 .checkbox-item:hover { background: var(--accent-bg); border-color: var(--text-muted); }
 .checkbox-text { color: var(--text-main); font-size: 0.95rem; font-weight: 400; }
 input[type=checkbox] { accent-color: var(--primary); width: 18px; height: 18px; cursor: pointer; }
+
+/* Select Dropdown */
+.input-select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--border-color);
+    background: var(--bg-body);
+    color: var(--text-main);
+    border-radius: 0.5rem;
+    font-family: inherit;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: border 0.2s;
+}
+.input-select:focus { outline: none; border-color: var(--primary); }
 
 /* Advanced Settings */
 details.advanced-settings {
