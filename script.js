@@ -1,6 +1,5 @@
-// Large German Word List (Significantly Expanded)
+// Large German Word List
 const germanWords = [
-    // A
     "Abbild","Abend","Abenteuer","Abfahrt","Abfall","Abgas","Abgrund","Abhang","Abkommen","Ablauf","Absatz","Abschied",
     "Abschnitt","Absicht","Abstand","Absturz","Abteil","Abteilung","Abwechslung","Abwehr","Achse","Acker","Ader",
     "Adler","Adresse","Affe","Agent","Aggregat","Ahnung","Ahorn","Akademie","Akzent","Akzeptanz","Alarm","Allee",
@@ -13,9 +12,7 @@ const germanWords = [
     "Attraktion","Aufbau","Aufgabe","Auflage","Aufnahme","Aufprall","Aufruf","Aufruhr","Aufschrei","Aufschwung","Auftrag",
     "Auftritt","Aufwand","Augenblick","August","Ausdruck","Ausfall","Ausflug","Ausgabe","Ausgang","Ausgleich","Aushang",
     "Auskunft","Ausland","Auslese","Ausnahme","Aussage","Aussehen","Aussicht","Austausch","Auswahl","Ausweg","Ausweis",
-    "Auswirkung","Auszeit","Auto","Automat","Autor","Axt",
-    // B
-    "Baby","Bach","Backofen","Bad","Bahn","Bahnhof","Bucht","Bulle",
+    "Auswirkung","Auszeit","Auto","Automat","Autor","Axt","Baby","Bach","Backofen","Bad","Bahn","Bahnhof","Bucht","Bulle",
     "Bakterie","Balance","Balkon","Ball","Ballon","Bambus","Banane","Band","Bandit","Bank","Bankett","Bar","Baracke",
     "Bär","Barriere","Bart","Basis","Bass","Bastler","Batterie","Bau","Bauch","Bauer","Baum","Baustelle","Bay","Beamter",
     "Becher","Becken","Bedarf","Bedrohung","Bedürfnis","Beere","Beet","Befehl","Befund","Begegnung","Beginn","Begriff",
@@ -27,12 +24,9 @@ const germanWords = [
     "Blog","Blume","Bluse","Blut","Boden","Bogen","Bohne","Bohrer","Boje","Bombe","Bonbon","Boot","Bord","Börse","Borte",
     "Bosheit","Bote","Botschaft","Brand","Branche","Brandung","Braten","Brauch","Brauerei","Braut","Breite","Bremse",
     "Brenner","Brett","Brief","Brille","Broschüre","Brot","Brücke","Bruder","Brunnen","Brust","Brut","Buch","Buchse",
-    "Buckel","Budget","Büffel","Bühne","Bündel","Bunker","Bürde","Büro","Bürste","Bus","Busch","Butter","Bauer",
-    // C
-    "Cafe","Campus","Camping","Chaos","Charakter","Charme","Chef","Chemie","Chirurg","Chor","Christ","Chrom","Chronik",
-    "Chance","Code","Computer","Couch","Cousine","Cover","Creme","Chiffre","Cocktail","Container","Chip","Cello",
-    // D
-    "Dach","Dachs","Dame","Damm","Dampf","Dank","Darm","Datei","Daten",
+    "Buckel","Budget","Büffel","Bühne","Bündel","Bunker","Bürde","Büro","Bürste","Bus","Busch","Butter","Cafe","Campus",
+    "Camping","Chaos","Charakter","Charme","Chef","Chemie","Chirurg","Chor","Christ","Chrom","Chronik","Chance","Code",
+    "Computer","Couch","Cousine","Cover","Creme","Dach","Dachs","Dame","Damm","Dampf","Dank","Darm","Datei","Daten",
     "Datum","Dauer","Daumen","Decke","Deckel","Defekt","Definition","Defizit","Degen","Dehnung","Dekade","Dekor",
     "Delfin","Delle","Demokratie","Demo","Denkmal","Depot","Design","Detail","Detektiv","Deutung","Dezember","Diät",
     "Dialog","Diamant","Dichtung","Dickicht","Dieb","Dienst","Diesel","Dietrich","Digital","Diktat","Dilemma","Dimension",
@@ -40,7 +34,6 @@ const germanWords = [
     "Dollar","Dom","Domäne","Donner","Doppel","Dorf","Dorn","Dose","Drache","Draht","Drama","Drang","Drehung","Dreieck",
     "Dreck","Droge","Drohung","Druck","Dschungel","Duft","Düne","Dünger","Dunkel","Dunst","Duplikat","Durchgang",
     "Durchschnitt","Durst","Dusche","Dutzend","Dynamik","Dozent","Drucker","Drilling","Debatte","Daune",
-    // E
     "Ebbe","Ebene","Echo","Echse","Ecke","Edelstein","Efeu","Effekt",
     "Ehe","Ehre","Ei","Eiche","Eichhörnchen","Eifer","Eigenheit","Eigentum","Eimer","Einblick","Eindruck","Einfluss",
     "Einfalt","Eingang","Einheit","Einkauf","Einkommen","Einladung","Einsatz","Einschlag","Einsicht","Eintrag",
@@ -51,7 +44,6 @@ const germanWords = [
     "Erlaubnis","Erlebnis","Erlös","Ermessen","Ernährung","Ernst","Ernte","Eroberung","Eröffnung","Ersatz",
     "Erscheinung","Ersparnis","Ertrag","Erwartung","Erzählung","Erzfeind","Erziehung","Esel","Essenz","Essig","Etage",
     "Etappe","Ethik","Etikett","Eule","Euro","Europa","Examen","Exemplar","Existenz","Export","Extra","Elch","Epos","Ebene",
-    // F
     "Fabrik","Facette","Fach","Fackel","Faden","Fähigkeit","Fahne","Fahrer","Fahrrad","Fahrt","Fahrzeug","Fakultät","Falke","Fall","Falle",
     "Falschheit","Falte","Familie","Fan","Farbe","Farm","Farn","Fass","Fassade","Fassung","Fasten","Faule","Faust",
     "Favorit","Fazit","Februar","Feder","Fee","Fehler","Feier","Feige","Feile","Feind","Feld","Fell","Fels","Fenster",
@@ -64,7 +56,6 @@ const germanWords = [
     "Fregatte","Freiheit","Freitag","Freizeit","Fremde","Frequenz","Freude","Freund","Friede","Friedhof","Frisur",
     "Frist","Frohsinn","Front","Frosch","Frost","Frucht","Frühling","Frühstück","Fuchs","Fuge","Führer","Fülle","Fund",
     "Fundament","Funke","Funktion","Furcht","Furche","Fusion","Fuss","Futter","Forelle","Fjord","Fackel","Falke","Fasan",
-    // G
     "Gabel","Galerie","Galle","Gang","Gans",
     "Ganzes","Garage","Garantie","Garde","Gardine","Garn","Garnison","Garten","Gas","Gasse","Gast","Gatte","Gattung",
     "Gaumen","Gaze","Gebäck","Gebärde","Gebäude","Gebein","Gebet","Gebiet","Gebirge","Gebot","Gebrauch","Geburt",
@@ -81,7 +72,6 @@ const germanWords = [
     "Graben","Grad","Graf","Grafik","Gramm","Grammatik","Granate","Granit","Gras","Grat","Grauen","Gravur","Greis",
     "Gremium","Grenze","Griff","Grille","Grimasse","Grips","Groll","Größe","Grotte","Grube","Gruft","Grund","Gruppe",
     "Gruß","Gummi","Gunst","Gurt","Guss","Gut","Gymnasium","Galle","Garn","Gasse","Gecko","Gans","Genom",
-    // H
     "Haar","Habe","Habicht","Hafen","Hafer","Haft","Hagel",
     "Hahn","Hai","Haken","Halbzeit","Hälfte","Halle","Hals","Halt","Haltung","Hammer","Hamster","Hand","Handel",
     "Handlung","Handwerk","Hang","Hantel","Hafen","Harmonie","Harnisch","Härte","Harz","Hase","Hasel","Hass","Haube",
@@ -92,18 +82,15 @@ const germanWords = [
     "Hof","Höflichkeit","Höhe","Höhle","Hohn","Holding","Holz","Honig","Horizont","Horn","Horoskop","Hose","Hotel",
     "Hubschrauber","Hüfte","Hügel","Huhn","Hülle","Hülse","Hummer","Humor","Hund","Hunger","Hupe","Hürde","Hure",
     "Hut","Hütte","Hyäne","Hydrant","Hygiene","Hymne","Hypnose","Hypothese","Hummel","Hering","Hafen","Hangar","Halle",
-    // I
     "Ideal","Idee","Identität","Idiot","Idol",
     "Igel","Ignoranz","Ikone","Illegalität","Illusion","Illustration","Imbiss","Imitation","Immobilie","Imperium",
     "Impuls","Index","Indikator","Individuum","Industrie","Infanterie","Infektion","Inflation","Info","Information",
     "Ingenieur","Ingwer","Inhaber","Inhalt","Initiative","Injektion","Insel","Inserat","Inspektor","Inspiration",
     "Instinkt","Institut","Instrument","Integration","Intelligenz","Intention","Interesse","Internet","Interview",
     "Intrige","Intuition","Invasion","Inventar","Investition","Investor","Ironie","Irrtum","Isolation","Insekt","Imker",
-    // J
     "Jacke","Jagd",
     "Jäger","Jahr","Jahrzehnt","Jänner","Januar","Japaner","Jargon","Jazz","Jeans","Joch","Jod","Joghurt","Journal",
     "Jubel","Jubiläum","Jude","Jugend","Juli","Juni","Jura","Jury","Justiz","Juwel","Jacht","Jackpot","Jaguar",
-    // K
     "Kabine","Kabel","Kabarett",
     "Kabinett","Kacheln","Kader","Kaffee","Käfig","Kai","Kaiser","Kakao","Kaktus","Kalender","Kalk","Kälte","Kamel",
     "Kamera","Kamin","Kamm","Kammer","Kampagne","Kampf","Kanal","Kandidat","Kanne","Kanone","Kante","Kanzel","Kanzler",
@@ -123,7 +110,6 @@ const germanWords = [
     "Krebs","Kredit","Kreide","Kreis","Kreisel","Kreuz","Krieg","Krise","Kristall","Kritik","Krokodil","Krone","Krug",
     "Krume","Kruste","Küche","Kuchen","Kugel","Kuh","Kühlraum","Kultur","Kunde","Kunst","Kupfer","Kuppel","Kurbel",
     "Kürbis","Kurs","Kurve","Küste","Kutsche","Kuvert","Känguru","Kiosk","Kranich","Klee","Kiesel","Kupfer","Kessel",
-    // L
     "Labor","Labyrinth","Lachs","Lack","Laden","Lage","Lager",
     "Lagune","Laib","Laie","Laken","Lampe","Land","Landschaft","Landung","Langeweile","Lanze","Lappen","Lärm","Larve",
     "Lasagne","Last","Lastwagen","Latein","Latte","Laub","Laune","Laus","Laut","Lawine","Layout","Lebewohl","Leben",
@@ -133,7 +119,6 @@ const germanWords = [
     "Lippe","Liste","Liter","Literatur","Lob","Loch","Locke","Logbuch","Logik","Logo","Lohn","Lokal","Lokomotive",
     "Lorbeer","Los","Lösung","Lotterie","Löwe","Lücke","Luft","Lüge","Luke","Lunge","Lunte","Lust","Luxus","Lyrik",
     "Lama","Lampion","Laser","Latrine","Laute","Leguan","Leiter","Libelle","Linde","Linse","Loge","Lotse","Luchs",
-    // M
     "Macht","Magazin","Magen","Magie","Magnet","Mahagoni","Mahlzeit","Mähne","Mai","Mais","Majestät","Major","Makel",
     "Makler","Mal","Maler","Mama","Mammut","Management","Mangel","Manieren","Manifest","Mann","Mannschaft","Manöver",
     "Mantel","Manuskript","Mappe","Märchen","Marge","Marine","Marionette","Mark","Marke","Marketing","Markt","Marmor",
@@ -146,19 +131,16 @@ const germanWords = [
     "Mohn","Moment","Monat","Mönch","Mond","Monitor","Monopol","Monster","Montag","Monument","Moor","Moos","Moral",
     "Mord","Morgen","Moschee","Moskito","Most","Motiv","Motor","Motte","Motto","Möwe","Mühe","Mühle","Müll","Mund",
     "Münze","Museum","Musik","Muskel","Muster","Mut","Mutter","Mysterium","Mythos","Made","Marder","Maskottchen","Matrose",
-    // N
     "Nachbar","Nachfrage","Nachlass",
     "Nachricht","Nachschlag","Nacht","Nachteil","Nacken","Nadel","Nagel","Nahaufnahme","Nahrung","Name","Narbe",
     "Nase","Nashorn","Nation","Natur","Nebel","Nebenbuhler","Neffe","Negativ","Neid","Neigung","Nektar","Nenner",
     "Nerv","Nervosität","Nest","Netz","Netzwerk","Neuheit","Neujahr","Neugier","Neun","Nichte","Nickel","Niederlage",
     "Niere","Niveau","Nobelpreis","Nomade","Nonne","Nord","Nordpol","Norm","Note","Notfall","Notiz","November","Nuance",
     "Null","Nummer","Nuss","Nutzen","Nylon","Nabel","Nachtigall","Nadelwald","Natter","Netzteil","Nilpferd","Nymphe",
-    // O
     "Oase","Obdach","Obelisk","Oberst","Objekt","Obst","Ochse","Ofen",
     "Offensive","Offizier","Öffnung","Ohr","Oktober","Öl","Olive","Onkel","Oper","Operation","Opfer","Optik","Optimismus",
     "Option","Orakel","Orange","Orchester","Orden","Ordner","Ordnung","Organ","Organisation","Organsmus","Orgel",
     "Orient","Original","Orkan","Ort","Osten","Ozean","Ozon","Oma","Opa","Opus","Orchidee","Otter","Oval",
-    // P
     "Paar","Pacht","Packung","Pädagoge","Paket","Pakt",
     "Palast","Palette","Palme","Panda","Paneel","Panik","Panne","Panorama","Panther","Panzer","Papa","Papagei",
     "Papier","Pappe","Paprika","Parabel","Parade","Paradies","Paragraph","Parfüm","Park","Parlament","Parole","Partei",
@@ -176,10 +158,8 @@ const germanWords = [
     "Projektil","Prominenz","Propaganda","Prophet","Prosa","Prospekt","Protest","Protokoll","Provinz","Prozess",
     "Prüfung","Psychologie","Publikum","Pudding","Puder","Puls","Pulver","Pumpe","Punkt","Puppe","Purpur","Puzzle",
     "Pyramide","Panther","Papaya","Pappel","Parcours","Pasta","Pfadfinder","Pfeilgift","Piano","Pirat","Platin",
-    // Q
     "Quadrat","Qual","Qualität","Qualle","Quantität","Quartett","Quartier","Quarz","Quaste","Quecksilber",
     "Quelle","Querschnitt","Quittung","Quote","Qualm","Quark","Quartal","Quitte",
-    // R
     "Rache","Rad","Radar","Radierer","Radio","Radius","Rahmen","Rakete",
     "Rampe","Rand","Rang","Rappe","Rarität","Rasse","Rassel","Rast","Rat","Rate","Rathaus","Ration","Rätsel","Ratte",
     "Raub","Rauch","Raum","Raupe","Rausch","Raute","Reaktion","Reaktor","Realität","Rebell","Rechen","Rechnung","Recht",
@@ -191,7 +171,6 @@ const germanWords = [
     "Roggen","Rohr","Rolle","Roman","Romantik","Röntgen","Rose","Rosine","Rost","Rotation","Rotkohl","Rotor","Routine",
     "Rubin","Rückkehr","Rückseite","Rückzug","Rudel","Ruf","Ruhe","Ruhm","Ruine","Rumpf","Runde","Runzel","Rüsche",
     "Rüssel","Rüstung","Rute","Rutsche","Rabe","Rachen","Radler","Raffinerie","Rakete","Rappe","Rasierer","Rebe","Rechner",
-    // S
     "Saal","Saat","Säbel","Sack","Saft","Sage","Säge","Sahne","Saison","Saite",
     "Salat","Salbe","Salon","Salz","Samen","Sammelsurium","Sammlung","Samstag","Sand","Sandale","Sänger","Sanitäter",
     "Sankt","Saphir","Sardine","Sarg","Satellit","Satin","Satire","Sattel","Satz","Sau","Sauerstoff","Säule","Saum",
@@ -222,7 +201,6 @@ const germanWords = [
     "Strudel","Struktur","Strumpf","Stube","Stück","Student","Studio","Stufe","Stuhl","Stumpf","Stunde","Sturm",
     "Sturz","Stute","Substanz","Suche","Sucht","Süden","Summe","Sumpf","Sünde","Suppe","Surfer","Symbol","Symmetrie",
     "Sympathie","Symptom","Synagoge","Syndikat","Syntax","Synthese","System","Szene","Safari","Sauna","Scanner","Schal","Schamane",
-    // T
     "Tabak","Tabelle","Tablette",
     "Tabu","Tacho","Tadel","Tafel","Tag","Tagebuch","Taille","Takt","Taktik","Tal","Talent","Talg","Talismann",
     "Tandem","Tang","Tank","Tanne","Tante","Tanz","Tapete","Tarif","Tasche","Tasse","Tastatur","Taste","Tat",
@@ -235,14 +213,12 @@ const germanWords = [
     "Treffer","Treue","Tribüne","Tribut","Trick","Trieb","Trift","Trinkgeld","Tritt","Triumph","Trommel","Trompete",
     "Tropfen","Trophäe","Trost","Trottel","Trubel","Truhe","Trümmer","Truppe","Truthahn","Tuch","Tugend","Tulpe",
     "Tumult","Tunnel","Tür","Turbine","Turm","Turnier","Typ","Tyrann","Tagung","Talisman","Teekanne","Teich","Theke","Tundra",
-    // U
     "U-Bahn","U-Boot","Übel","Uberfall","Ufer",
     "Uhr","Ulme","Umfang","Umgang","Umgebung","Umhang","Umkreis","Umriss","Umschlag","Umstand","Umwelt","Umzug",
     "Unfall","Unfug","Ungeheuer","Ungeduld","Unglück","Uniform","Union","Universität","Universum","Unrecht","Unruh",
     "Unschuld","Unsinn","Untergang","Unterhalt","Unterkunft","Unterlage","Unterricht","Unterschied","Unterschrift",
     "Untersuchung","Unterwäsche","Uran","Urkunde","Urlaub","Ursache","Urteil","Urwald","Vagabund","Vakuum","Valuta",
     "Ufo","Uhu","Unikat","Urlaub","Urne","Utensil",
-    // V
     "Vampir","Vanille","Variante","Variation","Vase","Vater","Vegetarier","Vehikel","Vene","Ventil","Verabredung",
     "Verachtung","Verband","Verbot","Verbrechen","Verbrecher","Verbrennung","Verbund","Verdacht","Verdienst","Verein",
     "Verfahren","Verfall","Verfassung","Verfolgung","Vergangenheit","Vergleich","Vergnügen","Verhalten","Verhältnis",
@@ -253,7 +229,6 @@ const germanWords = [
     "Vogel","Vogt","Vokabel","Vokal","Volk","Volumen","Vorbild","Vorderseite","Vorfall","Vorhang","Vorhersage",
     "Vorliebe","Vormittag","Vorname","Vorrat","Vorschlag","Vorschrift","Vorsicht","Vorsitz","Vorspeise","Vorstadt",
     "Vorstoß","Vorteil","Vortrag","Vorurteil","Vorwand","Vorwort","Vorwurf","Vulkan","Vektor","Ventilator","Video","Villa","Viola",
-    // W
     "Waage","Wachs","Wachtel",
     "Waffe","Wagen","Waggon","Wahl","Wahn","Wahrheit","Währung","Wal","Wald","Wall","Walnuss","Walzer","Wand",
     "Wandel","Wanderung","Wange","Wappen","Ware","Wärme","Warnung","Warte","Wäsche","Wasser","Watte","Wechsel",
@@ -263,7 +238,6 @@ const germanWords = [
     "Wildnis","Wille","Willkür","Wimper","Wind","Winkel","Winter","Wipfel","Wirbel","Wirkung","Wirt","Wirtschaft",
     "Wissen","Wissenschaft","Witwe","Witz","Woche","Woge","Wohl","Wohnung","Wolf","Wolke","Wolle","Wollust","Wort",
     "Wrack","Wunde","Wunder","Wunsch","Würde","Wurf","Würfel","Wurst","Wüste","Wut","Wabe","Waffel","Waggon","Wal","Wampe",
-    // XYZ
     "Yacht","Yard","Yoga","Zahl",
     "Zahlung","Zahn","Zange","Zapfen","Zauber","Zaun","Zebra","Zehe","Zeichen","Zeichnung","Zeigefinger","Zeile",
     "Zeit","Zeitung","Zelle","Zelt","Zement","Zenit","Zentrum","Zepter","Zeremonie","Zettel","Zeug","Zeuge",
@@ -426,8 +400,13 @@ function calculateEntropy(poolSize, length, hasNumber, separatorType, randomizeC
 function updateStrengthBar(entropy) {
     const bar = document.getElementById('strengthBar');
     const text = document.getElementById('entropyText');
+    const crackTimeText = document.getElementById('crackTimeText');
     
     text.textContent = entropy + " bits";
+    
+    // Update Crack Time Text
+    const crackTime = calculateCrackTime(entropy);
+    crackTimeText.textContent = `~${formatCrackTime(crackTime)}`;
 
     let width = 0;
     let colorClass = 'bar-red';
@@ -448,6 +427,28 @@ function updateStrengthBar(entropy) {
 
     bar.style.width = width + '%';
     bar.className = colorClass;
+}
+
+// Estimates time to crack assuming 100 billion guesses/second (strong GPU rig)
+function calculateCrackTime(entropy) {
+    const guessesPerSecond = 1e11; // 100 billion
+    const combinations = Math.pow(2, entropy);
+    return combinations / guessesPerSecond;
+}
+
+function formatCrackTime(seconds) {
+    if (seconds < 1) return "Sofort";
+    if (seconds < 60) return Math.round(seconds) + " Sekunden";
+    if (seconds < 3600) return Math.round(seconds / 60) + " Minuten";
+    if (seconds < 86400) return Math.round(seconds / 3600) + " Stunden";
+    if (seconds < 31536000) return Math.round(seconds / 86400) + " Tage";
+    if (seconds < 3153600000) return Math.round(seconds / 31536000) + " Jahre"; // Up to 100 years
+    
+    // For very large numbers
+    const years = seconds / 31536000;
+    if (years < 1e6) return Math.round(years / 1000) + "k Jahre";
+    if (years < 1e9) return Math.round(years / 1e6) + " Mio. Jahre";
+    return "Ewigkeiten";
 }
 
 function setSeparator(sep) {
