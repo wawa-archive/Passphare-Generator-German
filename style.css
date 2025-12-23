@@ -1,3 +1,4 @@
+/* ... existing root variables ... */
 :root {
     /* Dark Grey / Zinc Theme */
     --bg-body: #e4e4e7;       /* zinc-200 */
@@ -107,7 +108,7 @@ main { padding: 2.5rem; display: flex; flex-direction: column; gap: 2rem; }
 
 .label-row { display: flex; justify-content: space-between; align-items: center; }
 
-/* REFINED LABEL STYLING (Not bold, not uppercase) */
+/* REFINED LABEL STYLING */
 label { 
     font-size: 0.9rem; 
     font-weight: 500; 
@@ -122,29 +123,34 @@ label {
     background-color: var(--output-bg);
     border-radius: 0.75rem;
     border: 1px solid var(--border-color);
-    padding: 2rem; /* More padding */
-    padding-right: 6rem;
+    padding: 1.5rem;
     transition: border-color 0.2s;
+    /* FLEXBOX LAYOUT TO PREVENT OVERLAP */
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; /* Align to top */
+    gap: 1rem;
 }
 .output-wrapper:hover { border-color: var(--text-muted); }
 
 #passphraseOutput {
     font-family: 'JetBrains Mono', monospace;
-    font-size: 1.5rem; /* Larger font */
+    font-size: 1.5rem;
     line-height: 1.4;
-    word-break: break-word; /* Better wrapping */
+    word-break: break-word; /* Essential for long words */
     min-height: 3.5rem;
     display: flex;
     align-items: center;
     color: var(--text-main);
+    flex: 1; /* Take up all available space */
 }
 
 .action-buttons {
-    position: absolute;
-    top: 16px;
-    right: 16px;
+    /* Removed absolute positioning */
     display: flex;
     gap: 8px;
+    flex-shrink: 0; /* Prevent buttons from shrinking */
+    margin-top: 4px; /* Slight alignment adjustment */
 }
 
 .icon-btn {
@@ -189,7 +195,7 @@ input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; width: 20px;
 input[type=range]::-webkit-slider-thumb:hover { transform: scale(1.15); }
 
 /* Separator Buttons */
-.separator-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.5rem; } /* 4 cols now */
+.separator-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.5rem; }
 .sep-btn {
     padding: 0.75rem 0.5rem;
     border: 1px solid var(--border-color);
@@ -218,7 +224,7 @@ input[type=range]::-webkit-slider-thumb:hover { transform: scale(1.15); }
     transition: background 0.2s, border-color 0.2s;
 }
 .checkbox-item:hover { background: var(--accent-bg); border-color: var(--text-muted); }
-.checkbox-text { color: var(--text-main); font-size: 0.95rem; font-weight: 400; } /* Ensured not bold */
+.checkbox-text { color: var(--text-main); font-size: 0.95rem; font-weight: 400; }
 input[type=checkbox] { accent-color: var(--primary); width: 18px; height: 18px; cursor: pointer; }
 
 /* Advanced Settings */
