@@ -231,7 +231,12 @@ const germanWords = [
 // Ensure array is unique (deduplication)
 const uniqueWords = [...new Set(germanWords)];
 
-// Initializer
+// Settings Elements
+const settingsInputs = [
+    'wordCount', 'separator', 'capitalize', 'addNumber', 'addSymbol',
+    'minLength', 'maxLength', 'specialCharPool', 'excludedWords', 'customWords'
+];
+
 document.addEventListener('DOMContentLoaded', () => {
     // Check Dark Mode
     if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
@@ -240,29 +245,110 @@ document.addEventListener('DOMContentLoaded', () => {
         document.documentElement.removeAttribute('data-theme');
     }
     
+    // Load Settings if enabled
+    loadSettings();
+
     // Bind Events
     document.getElementById('btnMainGenerate').addEventListener('click', generatePassphrase);
     document.getElementById('btnRefresh').addEventListener('click', generatePassphrase);
     document.getElementById('btnCopy').addEventListener('click', copyToClipboard);
     document.getElementById('themeToggle').addEventListener('click', toggleTheme);
-    document.getElementById('wordCount').addEventListener('input', updateUI);
+    document.getElementById('wordCount').addEventListener('input', (e) => {
+        updateUI();
+        saveSettings(); // Auto-save on slider input too
+    });
     
-    // Bind Inputs causing regen
-    const changeInputs = ['capitalize', 'addNumber', 'addSymbol', 'minLength', 'maxLength', 'specialCharPool', 'excludedWords', 'customWords'];
-    changeInputs.forEach(id => {
-        document.getElementById(id).addEventListener('change', generatePassphrase);
+    // Bind Inputs causing regen & save
+    settingsInputs.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) {
+            el.addEventListener('change', () => {
+                saveSettings();
+                generatePassphrase();
+            });
+        }
+    });
+
+    // Save Settings Toggle
+    const saveCheckbox = document.getElementById('saveSettingsCheckbox');
+    saveCheckbox.addEventListener('change', () => {
+        if (saveCheckbox.checked) {
+            localStorage.setItem('saveSettings', 'true');
+            saveSettings(); // Save current state immediately
+        } else {
+            localStorage.setItem('saveSettings', 'false');
+            clearSettings(); // Clear stored settings
+        }
     });
 
     // Separator Buttons
     document.querySelectorAll('.sep-btn').forEach(btn => {
         btn.addEventListener('click', (e) => {
             setSeparator(e.target.dataset.sep);
+            saveSettings();
         });
     });
 
     // Initial Run
     updateUI();
 });
+
+// Settings Management
+function loadSettings() {
+    const isSaved = localStorage.getItem('saveSettings') === 'true';
+    document.getElementById('saveSettingsCheckbox').checked = isSaved;
+
+    if (!isSaved) return;
+
+    const saved = JSON.parse(localStorage.getItem('passphraseSettings') || '{}');
+    if (Object.keys(saved).length === 0) return;
+
+    // Apply values
+    if (saved.wordCount) document.getElementById('wordCount').value = saved.wordCount;
+    if (saved.separator) {
+        document.getElementById('separator').value = saved.separator;
+        // Update separator UI
+        document.querySelectorAll('.sep-btn').forEach(btn => {
+            if(btn.dataset.sep === saved.separator) btn.classList.add('active');
+            else btn.classList.remove('active');
+        });
+    }
+    if (saved.capitalize !== undefined) document.getElementById('capitalize').checked = saved.capitalize;
+    if (saved.addNumber !== undefined) document.getElementById('addNumber').checked = saved.addNumber;
+    if (saved.addSymbol !== undefined) document.getElementById('addSymbol').checked = saved.addSymbol;
+    
+    // Advanced
+    if (saved.minLength) document.getElementById('minLength').value = saved.minLength;
+    if (saved.maxLength) document.getElementById('maxLength').value = saved.maxLength;
+    if (saved.specialCharPool) document.getElementById('specialCharPool').value = saved.specialCharPool;
+    if (saved.excludedWords) document.getElementById('excludedWords').value = saved.excludedWords;
+    if (saved.customWords) document.getElementById('customWords').value = saved.customWords;
+}
+
+function saveSettings() {
+    if (document.getElementById('saveSettingsCheckbox').checked !== true) return;
+
+    const settings = {
+        wordCount: document.getElementById('wordCount').value,
+        separator: document.getElementById('separator').value,
+        capitalize: document.getElementById('capitalize').checked,
+        addNumber: document.getElementById('addNumber').checked,
+        addSymbol: document.getElementById('addSymbol').checked,
+        minLength: document.getElementById('minLength').value,
+        maxLength: document.getElementById('maxLength').value,
+        specialCharPool: document.getElementById('specialCharPool').value,
+        excludedWords: document.getElementById('excludedWords').value,
+        customWords: document.getElementById('customWords').value
+    };
+
+    localStorage.setItem('passphraseSettings', JSON.stringify(settings));
+}
+
+function clearSettings() {
+    localStorage.removeItem('passphraseSettings');
+}
+
+// ... Rest of the original logic (Entropy, Generation, Clipboard) remains the same ...
 
 function getSecureRandomInt(max) {
     const array = new Uint32Array(1);
